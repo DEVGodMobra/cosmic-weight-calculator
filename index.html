@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Peso en el sistema solar</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="background-stars"></div>
+
+  <div class="container">
+    <div class="input-card">
+      <h1>🌌 Explore your weight in the cosmos</h1>
+      <p class="subtitulo">
+        Enter your information and discover how much you would weigh and how old you would be on other planets.
+      </p>
+
+      <form id="formDatos" class="formulario">
+        <input type="number" id="edadInput" placeholder="Age (years)" min="1" max="120" required />
+        <input type="number" id="pesoInput" placeholder="Weight on Earth (kg)" min="1" required />
+        <button type="submit">Calculate</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <button id="cerrarModal" class="close">✕</button>
+
+      <div class="carousel"></div>
+
+      <div class="carousel-controls">
+        <button id="prevSlide">Previous</button>
+        <button id="nextSlide">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
