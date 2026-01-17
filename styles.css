@@ -213,3 +213,16 @@ body {
 .formulario button:active {
   transform: scale(0.95);
 }
+
+.formulario {
+  display: flex;
+  flex-direction: column; /* 🔥 FORMULARIO VERTICAL */
+  gap: 15px;
+  align-items: center;
+  margin-top: 25px;
+}
+
+.formulario input {
+  width: 100%;
+  max-width: 280px;
+}

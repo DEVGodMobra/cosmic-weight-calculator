@@ -63,8 +63,8 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2>${p.toUpperCase()}</h2>
         <img src="${imagenes[p]}">
         <div class="peso-cuerpo">
-          Weight: ${pesoRel} kg<br>
-          Age: ${edadRel}
+          YOUR WEIGHT IS: ${pesoRel} kg<br>
+          YOUR AGE IS: ${edadRel}
         </div>
       `;
 
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     slides.forEach((s, idx) => s.classList.toggle('active', idx === i));
   }
 
-  /* ⭐ EFECTO ESTELA RESTAURADO */
+  /* ⭐ EFECTO ESTELA */
   document.body.addEventListener('mousemove', e => {
     if (e.target.closest('.modal')) return;
     const st = document.createElement('div');
@@ -85,6 +85,6 @@ document.addEventListener('DOMContentLoaded', () => {
     st.style.left = `${e.clientX - 20}px`;
     st.style.top = `${e.clientY - 20}px`;
     document.body.appendChild(st);
-    setTimeout(() => st.remove(), 800);
+    setTimeout(() => st.remove(), 800); // ✅ corregido
   });
 });
