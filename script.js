@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <img src="${imagenes[p]}">
         <div class="peso-cuerpo">
           YOUR WEIGHT IS: ${pesoRel} kg<br>
-          YOUR AGE IS: ${edadRel}
+          YOUR AGE IS: ${edadRel} OLD
         </div>
       `;
 
