@@ -126,14 +126,14 @@ body {
 }
 
 .slide img {
-  width: 240px;
-  height: 240px;
+  width: 400px;
+  height: 400px;
   object-fit: contain;
   margin-bottom: 15px;
 }
 /* Ajuste especial para el GIF del Sol */
 .slide img[src*="sun"] {
-  transform: scale(1.4); /* agranda el contenido visible */
+  transform: scale(1.6); /* agranda el contenido visible */
 }
 
 
