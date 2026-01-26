@@ -1,10 +1,15 @@
-/* Reset */
+/* ===========================
+   RESET GENERAL
+=========================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ===========================
+   BODY
+=========================== */
 body {
   overflow: hidden;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -12,7 +17,9 @@ body {
   background: #000;
 }
 
-/* Fondo */
+/* ===========================
+   FONDO ESTRELLAS
+=========================== */
 .background-stars {
   position: fixed;
   inset: 0;
@@ -21,7 +28,9 @@ body {
   z-index: -2;
 }
 
-/* Estela */
+/* ===========================
+   ESTELA DEL CURSOR
+=========================== */
 .stela {
   position: absolute;
   pointer-events: none;
@@ -33,10 +42,15 @@ body {
 }
 
 @keyframes girar {
-  to { transform: scale(1.4) rotate(360deg); opacity: 0; }
+  to {
+    transform: scale(1.4) rotate(360deg);
+    opacity: 0;
+  }
 }
 
-/* Contenedor */
+/* ===========================
+   CONTENEDOR PRINCIPAL
+=========================== */
 .container {
   position: fixed;
   inset: 50% auto auto 50%;
@@ -46,7 +60,9 @@ body {
   text-align: center;
 }
 
-/* Card */
+/* ===========================
+   TARJETA DE ENTRADA
+=========================== */
 .input-card {
   background: rgba(0, 0, 20, 0.5);
   border: 1px solid #80dfff;
@@ -57,49 +73,57 @@ body {
   box-shadow: 0 0 25px #00f0ff66;
 }
 
-/* Modal */
+/* ===========================
+   MODAL
+=========================== */
 .modal {
   display: none;
   position: fixed;
   inset: 0;
-  background: rgba(0,0,20,.9);
+  background: rgba(0, 0, 20, 0.9);
   backdrop-filter: blur(5px);
   z-index: 20;
 }
 
-/* Modal content (NO overflow) */
+/* ===========================
+   CONTENIDO MODAL
+=========================== */
 .modal-content {
   position: relative;
   width: 90%;
   max-width: 900px;
-  height: 85vh;
+  height: 82vh;
   margin: 3% auto;
   background: #111;
   border-radius: 15px;
-  padding: 30px;
+  padding: 25px;
   box-shadow: 0 0 30px #00f0ff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-/* X estilizada */
+/* ===========================
+   BOTÓN CERRAR
+=========================== */
 .close {
   position: absolute;
   top: 12px;
   right: 12px;
-  width: 40px;
-  height: 40px;
+  width: 34px;
+  height: 34px;
   border-radius: 50%;
   border: none;
-  background: rgba(128,223,255,.15);
+  background: rgba(128, 223, 255, 0.15);
   color: #80dfff;
-  font-size: 1.4em;
+  font-size: 1.2em;
   cursor: pointer;
   box-shadow: 0 0 10px #00f0ff;
 }
 
-/* Carrusel */
+/* ===========================
+   CARRUSEL
+=========================== */
 .carousel {
   flex: 1;
   display: flex;
@@ -107,6 +131,9 @@ body {
   justify-content: center;
 }
 
+/* ===========================
+   SLIDES
+=========================== */
 .slide {
   display: none;
   text-align: center;
@@ -117,73 +144,88 @@ body {
   display: block;
 }
 
-/* Planeta */
+/* ===========================
+   TÍTULO DEL PLANETA
+=========================== */
 .slide h2 {
-  font-size: 3.2em;
-  letter-spacing: 3px;
-  margin-bottom: 15px;
+  font-size: 2.6em;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
   text-shadow: 0 0 15px #00f0ff;
 }
 
+/* ===========================
+   IMÁGENES DE PLANETAS
+   (NO SE MODIFICA TAMAÑO)
+=========================== */
 .slide img {
   width: 400px;
   height: 400px;
   object-fit: contain;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
 }
+
 /* Ajuste especial para el GIF del Sol */
 .slide img[src*="sun"] {
-  transform: scale(1.6); /* agranda el contenido visible */
+  transform: scale(1.6);
 }
 
-
-
-/* Info desactivada */
+/* ===========================
+   INFO (DESACTIVADA)
+=========================== */
 .slide .info {
   display: none;
 }
 
-/* Peso / Edad */
+/* ===========================
+   TEXTO PESO / EDAD
+=========================== */
 .slide .peso-cuerpo {
-  font-size: 2em;
+  font-size: 1.6em;
   color: #80dfff;
   text-shadow: 0 0 15px #00f0ff;
-  line-height: 1.5;
+  line-height: 1.35;
 }
 
-/* Controles */
+/* ===========================
+   CONTROLES DEL CARRUSEL
+=========================== */
 .carousel-controls {
   text-align: center;
+  margin-top: 10px;
 }
 
 .carousel-controls button {
-  padding: 10px 22px;
-  font-size: 1.2em;
-  margin: 0 10px;
+  padding: 8px 18px;
+  font-size: 1em;
+  margin: 0 8px;
   background: #33ccff;
   border: none;
-  border-radius: 8px;
+  border-radius: 7px;
   cursor: pointer;
 }
-/* ===========================
-   ESTILOS DEL FORMULARIO
-=========================== */
 
+/* ===========================
+   FORMULARIO
+=========================== */
 .formulario {
   display: flex;
-  gap: 12px;
-  justify-content: center;
+  flex-direction: column;
+  gap: 15px;
   align-items: center;
   margin-top: 25px;
-  flex-wrap: wrap;
 }
 
+/* ===========================
+   INPUTS
+=========================== */
 .formulario input {
   background: rgba(0, 10, 30, 0.75);
   border: 1px solid #80dfff;
   border-radius: 8px;
   padding: 12px 14px;
-  width: 160px;
+  width: 100%;
+  max-width: 280px;
   color: #ffffff;
   font-size: 1em;
   outline: none;
@@ -200,7 +242,9 @@ body {
   box-shadow: 0 0 18px #00f0ff;
 }
 
-/* Botón */
+/* ===========================
+   BOTÓN CALCULAR
+=========================== */
 .formulario button {
   background: linear-gradient(135deg, #00cfff, #0077ff);
   border: none;
@@ -220,17 +264,4 @@ body {
 
 .formulario button:active {
   transform: scale(0.95);
-}
-
-.formulario {
-  display: flex;
-  flex-direction: column; /* 🔥 FORMULARIO VERTICAL */
-  gap: 15px;
-  align-items: center;
-  margin-top: 25px;
-}
-
-.formulario input {
-  width: 100%;
-  max-width: 280px;
 }
